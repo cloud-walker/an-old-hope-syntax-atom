@@ -4,146 +4,143 @@
 // This can be done in user's init script.
 // ie) document.body.classList.add('an-old-hope-modify-ui')
 .an-old-hope-modify-ui {
-
-    .tree-view {
-        &::before {
-            background: @artoo;
-        }
-
-        .header.list-item,
-        .list-item {
-            color: lighten(@light-grey, 5%);
-        }
+  .tree-view {
+    &::before {
+      background: @artoo;
     }
 
-    .tab-bar {
-        .tab {
-            &::before {
-                background: @artoo;
-            }
+    .syntax--header.list-item,
+    .list-item {
+      color: lighten(@light-grey, 5%);
+    }
+  }
 
-            .title {
-                color: @grey;
-            }
-
-            &.active .title {
-                color: lighten(@very-light-grey, 10%);
-            }
-
-            .close-icon {
-                color: @artoo !important;
-            }
-        }
+  .tab-bar .tab {
+    &::before {
+      background: @artoo;
     }
 
-    atom-text-editor.editor {
-        .line-number {
-            padding-left: 18px !important;
-        }
+    .title {
+      color: @grey;
     }
 
-    .status-added,
-    .status-added > .list-item {
-        color: @yoda !important;
+    &.active .title {
+      color: lighten(@very-light-grey, 10%);
     }
 
-    .status-modified,
-    .status-modified > .list-item {
-        color: @artoo !important;
+    .close-icon {
+      color: @artoo !important;
+    }
+  }
+
+  atom-text-editor.editor {
+    .line-number {
+      padding-left: 18px !important;
+    }
+  }
+
+  .status-added,
+  .status-added > .list-item {
+    color: @yoda !important;
+  }
+
+  .status-modified,
+  .status-modified > .list-item {
+    color: @artoo !important;
+  }
+
+  .status-removed {
+    color: @vader !important;
+  }
+
+  .status-renamed {
+    color: lighten(@luke, 10%) !important;
+  }
+
+  .status-ignored,
+  .status-ignored > .list-item {
+    color: lighten(@dark-grey, 5%) !important;
+  }
+
+  .status-bar {
+    color: lighten(@dark-grey, 5%);
+
+    a,
+    div {
+      color: lighten(@dark-grey, 5%);
     }
 
-    .status-removed {
-        color: @vader !important;
+    .deprecation-cop-status {
+      color: lighten(@luke, 10%);
     }
 
-    .status-renamed {
-        color: lighten(@luke, 10%) !important;
+    .package-updates-status-view {
+      color: @yoda;
+    }
+  }
+
+  .settings-view {
+    input[type="checkbox"]:checked {
+      background-color: @artoo;
     }
 
-    .status-ignored,
-    .status-ignored > .list-item {
-        color: lighten(@dark-grey, 5%) !important;
+    button.selected,
+    .btn.btn-default.selected,
+    .btn.btn-info {
+      background: @artoo;
+
+      &:hover {
+        background: lighten(@artoo, 10%);
+      }
     }
+  }
 
-    .status-bar {
-        color: lighten(@dark-grey, 5%);
+  .btn.btn-primary {
+    background: @artoo;
+  }
 
-        a,
-        div {
-            color: lighten(@dark-grey, 5%);
-        }
+  a.link {
+    color: @yoda;
 
-        .deprecation-cop-status {
-            color: lighten(@luke, 10%);
-        }
-
-        .package-updates-status-view {
-            color: @yoda;
-        }
+    &:hover {
+      color: @yoda;
     }
+  }
 
-    .settings-view {
-        input[type="checkbox"]:checked {
-            background-color: @artoo;
-        }
+  atom-text-editor[mini].is-focused {
+    border-color: @artoo;
+    box-shadow: 0 0 0 1px @artoo;
+  }
 
-        button.selected,
-        .btn.btn-default.selected,
-        .btn.btn-info {
-            background: @artoo;
+  .tooltip {
+    @tooltips: @yoda;
 
-            &:hover {
-                background: lighten(@artoo, 10%);
-            }
-        }
+    &.top .tooltip-arrow {
+      border-top-color: @tooltips;
     }
-
-    .btn.btn-primary {
-        background: @artoo;
+    &.top-left .tooltip-arrow {
+      border-top-color: @tooltips;
     }
-
-    a.link {
-        color: @yoda;
-
-        &:hover {
-            color: @yoda;
-        }
+    &.top-right .tooltip-arrow {
+      border-top-color: @tooltips;
     }
-
-    atom-text-editor[mini].is-focused {
-        border-color: @artoo;
-        box-shadow: 0 0 0 1px @artoo;
+    &.right .tooltip-arrow {
+      border-right-color: @tooltips;
     }
-
-    .tooltip {
-        @tooltips: @yoda;
-
-        &.top .tooltip-arrow {
-          border-top-color: @tooltips;
-        }
-        &.top-left .tooltip-arrow {
-          border-top-color: @tooltips;
-        }
-        &.top-right .tooltip-arrow {
-          border-top-color: @tooltips;
-        }
-        &.right .tooltip-arrow {
-          border-right-color: @tooltips;
-        }
-        &.left .tooltip-arrow {
-          border-left-color: @tooltips;
-        }
-        &.bottom .tooltip-arrow {
-          border-bottom-color: @tooltips;
-        }
-        &.bottom-left .tooltip-arrow {
-          border-bottom-color: @tooltips;
-        }
-        &.bottom-right .tooltip-arrow {
-          border-bottom-color: @tooltips;
-        }
-        .tooltip-inner {
-            background: @tooltips;
-        }
+    &.left .tooltip-arrow {
+      border-left-color: @tooltips;
     }
+    &.bottom .tooltip-arrow {
+      border-bottom-color: @tooltips;
+    }
+    &.bottom-left .tooltip-arrow {
+      border-bottom-color: @tooltips;
+    }
+    &.bottom-right .tooltip-arrow {
+      border-bottom-color: @tooltips;
+    }
+    .tooltip-inner {
+      background: @tooltips;
+    }
+  }
 }
