@@ -1,0 +1,29 @@
+@import 'units/stormtroopers';
+
+/**
+ * A mini planet.
+ */
+#death-star {
+  background-color: gray;
+  color: rgba(0, 0, 0, 1);
+}
+
+/**
+ * The Jedi's weapon.
+ */
+.light-saber {
+  height: 900000px;
+  width: 900px;
+}
+.light-saber--blue {
+  background-color: lightblue;
+}
+.light-saber--red {
+  background-color: red;
+}
+
+@media screen and (max-width: 320px) {
+  .luke {
+    width: 100%;
+  }
+}
