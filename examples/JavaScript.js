@@ -1,5 +1,10 @@
 import React, {Component} from 'react'
 
+/**
+ * DeathStar component
+ *
+ * @param {Object} children
+ */
 const DeathStar = ({children}) =>
   <main>
     <section className="airstrip">
@@ -15,6 +20,11 @@ const DeathStar = ({children}) =>
   </main>
 
 class Jedi extends Component {
+  /**
+   * These aren't the droids you're looking for.
+   *
+   * @type {Array}
+   */
   static $droids = [
     'R2-D2',
     'C-3PO'
@@ -26,6 +36,11 @@ class Jedi extends Component {
     this.name = name
   }
 
+  /**
+   * Ask Ben for advice.
+   *
+   * @return {String}
+   */
   askKenobi() {
     if (this.isBlindFolded()) {
       return this.useTheForceLuke()
@@ -34,6 +49,11 @@ class Jedi extends Component {
     this.searchFeelings()
   }
 
+  /**
+   * Rendering battlefield.
+   *
+   * @return {Object}
+   */
   render() {
     return (
       <div className="battlefield">
