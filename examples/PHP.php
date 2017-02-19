@@ -28,12 +28,12 @@ class Jedi extends Model
      *
      * @return string
      */
-    public function askKenobi()
+    public function askKenobi(something)
     {
         if ($this->blindfolded()) {
-            return $this->useTheForceLuke();
+            return $this->useTheForceLuke(something);
         }
 
-        return $this->searchFeelings();
+        return $this->searchFeelings(something);
     }
 }
